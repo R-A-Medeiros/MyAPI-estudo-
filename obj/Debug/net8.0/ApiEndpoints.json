@@ -1,7 +1,76 @@
 [
   {
     "ContainingType": "MyFirstAPI.Controllers.UserController",
-    "Method": "Get",
+    "Method": "Create",
+    "RelativePath": "api/user",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "MyFirstAPI.Communication.request.RequestRegisterUser",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "MyFirstAPI.Communication.response.ResponseRegisteredUser",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 201
+      }
+    ]
+  },
+  {
+    "ContainingType": "MyFirstAPI.Controllers.UserController",
+    "Method": "Update",
+    "RelativePath": "api/user",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "request",
+        "Type": "MyFirstAPI.Communication.request.RequestUpdateUserProfile",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 204
+      }
+    ]
+  },
+  {
+    "ContainingType": "MyFirstAPI.Controllers.UserController",
+    "Method": "Delete",
+    "RelativePath": "api/user",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 204
+      }
+    ]
+  },
+  {
+    "ContainingType": "MyFirstAPI.Controllers.UserController",
+    "Method": "GetAll",
     "RelativePath": "api/user",
     "HttpMethod": "GET",
     "IsController": true,
@@ -9,13 +78,61 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "MyFirstAPI.Models.Response",
+        "Type": "System.Collections.Generic.List\u00601[[MyFirstAPI.Models.User, MyFirstAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
           "text/json"
         ],
         "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "MyFirstAPI.Controllers.UserController",
+    "Method": "Get",
+    "RelativePath": "api/user/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "MyFirstAPI.Models.User",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "MyFirstAPI.Controllers.UserController",
+    "Method": "ChangePassword",
+    "RelativePath": "api/user/change-password",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "MyFirstAPI.Communication.request.RequestChangePassword",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 204
       }
     ]
   }
