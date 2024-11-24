@@ -135,5 +135,15 @@
         "StatusCode": 204
       }
     ]
+  },
+  {
+    "ContainingType": "MyFirstAPI.Controllers.MyFirstApiBaseController",
+    "Method": "Heathy",
+    "RelativePath": "api/user/heathy",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   }
 ]
