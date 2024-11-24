@@ -6,9 +6,7 @@ using System.Net.Cache;
 
 namespace MyFirstAPI.Controllers;
 
-[Route("api/[controller]")]
-[ApiController]
-public class UserController : ControllerBase
+public class UserController : MyFirstApiBaseController
 {
     [HttpGet]
     [Route("{id}")]
